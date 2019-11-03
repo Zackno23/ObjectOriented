@@ -12,10 +12,10 @@ class Username:
         alphabet_ascii = list(range(65, 91)) + list(range(97, 123))
 
         if not (4 <= len(name) <= 20):
-            raise ValueError("字数がおうてへんで")
+            raise ValueError("字数がちがうよ！")
         for i in name:
             if not ord(i) in alphabet_ascii:
-                raise ValueError("アルファベットやないとあかんで")
+                raise ValueError("アルファベットじゃないとだめだよ！")
 
         name.upper()
 
