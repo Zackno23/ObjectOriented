@@ -9,10 +9,15 @@
 class Username:
     def __init__(self, name):
         self.name = name
+        alphabet_ascii = list(range(65, 91)) + list(range(97, 123))
+
         if not (4 <= len(name) <= 20):
             raise ValueError("字数がおうてへんで")
-        if not name.isalpha():
-            raise ValueError("アルファベットしかダメやで")
+        for i in name:
+            if not ord(i) in alphabet_ascii:
+                raise ValueError("アルファベットやないとあかんで")
+
+
         name.upper()
 
     def print_Upper_name(self):
@@ -21,10 +26,14 @@ class Username:
 
 print()
 
+def alphabet_check(name):
+    alphabet_ascii = list(range(65,91)) + list(range(97,123))
+    for i in alphabet_ascii:
+        if ord(i) in alphabet_ascii:
+            return False
+    else:
+        return True
 
+hibiki = Username(name='hibikisan')
 
-hibiki = Username(name='ひびきくん')
-chikara = Username(name="chikara")
-
-hibiki.print_name()
-chikara.print_name()
+hibiki.print_Upper_name()
