@@ -26,6 +26,6 @@ class Username:
 
 print()
 
-hibiki = Username(name='hibikisan')
+hibiki = Username(name='ひびきさん')
 
 hibiki.print_Upper_name()
