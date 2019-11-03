@@ -17,22 +17,18 @@ class Username:
             if not ord(i) in alphabet_ascii:
                 raise ValueError("アルファベットやないとあかんで")
 
-
         name.upper()
 
     def print_Upper_name(self):
         name = self.name.upper()
         print(name)
 
+
 print()
 
-def alphabet_check(name):
-    alphabet_ascii = list(range(65,91)) + list(range(97,123))
-    for i in alphabet_ascii:
-        if ord(i) in alphabet_ascii:
-            return False
-    else:
-        return True
+
+
+
 
 hibiki = Username(name='hibikisan')
 
